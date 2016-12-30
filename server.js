@@ -75,8 +75,8 @@ app.delete('/todos/:id', function (req, res) {
 
 //PUT /todos/:id
 app.put('/todos/:id', function (req, res) {
-	var todoId = parseInt(req.params.id, 10);
-	var matchedTodo = _.findWhere(todos, {id: todoId});
+var todoId = parseInt(req.params.id, 10);
+		var matchedTodo = _.findWhere(todos, {id: todoId});
 	var body = _.pick(req.body, 'description', 'completed');
 	var validAttributes = {};
 
